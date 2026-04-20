@@ -1,0 +1,13 @@
+backend/__pycache__/
+backend/news.db
+.omc/
+*.pyc
+*.log
+
+# Environment variables (API keys)
+.env
+**/.env
+
+# OS
+.DS_Store
+Thumbs.db

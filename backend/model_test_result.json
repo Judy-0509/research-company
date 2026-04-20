@@ -1,0 +1,136 @@
+[
+  {
+    "article": 1,
+    "id": 12239,
+    "lang": "en",
+    "title": "The global smartphone market rebounds for the third consecutive quarter with a 1",
+    "existing_summary": "Canalys reports that the global smartphone market rebounds for the third consecutive quarter with a 12% growth.",
+    "models": {
+      "glm-4.7": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article.\n ",
+        "elapsed": 5.9,
+        "error": null
+      },
+      "glm-4.6": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article.\n ",
+        "elapsed": 3.5,
+        "error": null
+      },
+      "glm-4.5": {
+        "content": "The global smartphone market has experienced a 12% growth for the third consecutive quarter, according to market research firm Canalys, indicating a sustained recovery in the industry.",
+        "reasoning_snippet": "I need to summarize the given article in 1-2 sentences in English. Let me analyz",
+        "elapsed": 4.5,
+        "error": null
+      }
+    }
+  },
+  {
+    "article": 2,
+    "id": 6954,
+    "lang": "en",
+    "title": "Best smartphones for heavy users for the start of 2026, from budget to premium -",
+    "existing_summary": "Notebookcheck lists the best smartphones for heavy users for the start of 2026, ranging from budget to premium models.",
+    "models": {
+      "glm-4.7": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Source Material:** A title (and presumabl",
+        "elapsed": 6.1,
+        "error": null
+      },
+      "glm-4.6": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article ti",
+        "elapsed": 3.8,
+        "error": null
+      },
+      "glm-4.5": {
+        "content": "I notice you've only provided the title of the article but not its content. Without the actual article text, I cannot provide a summary. If you could share the content of the article \"Best smartphones",
+        "reasoning_snippet": "I need to summarize the article titled \"Best smartphones for heavy users for the",
+        "elapsed": 5.2,
+        "error": null
+      }
+    }
+  },
+  {
+    "article": 3,
+    "id": 6984,
+    "lang": "en",
+    "title": "New RedMagic gaming smartphone reveals itself with launch officially 'coming soo",
+    "existing_summary": "Notebookcheck reports that a new RedMagic gaming smartphone has been revealed with a launch that is officially coming soon.",
+    "models": {
+      "glm-4.7": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article.\n ",
+        "elapsed": 2.8,
+        "error": null
+      },
+      "glm-4.6": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article.\n ",
+        "elapsed": 2.8,
+        "error": null
+      },
+      "glm-4.5": {
+        "content": "RedMagic has officially revealed its new gaming smartphone, with the company announcing that the device's launch is \"coming soon.\" The announcement comes from Notebookcheck, though specific details ab",
+        "reasoning_snippet": "I need to summarize the article in 1-2 sentences. The title and the short text p",
+        "elapsed": 3.9,
+        "error": null
+      }
+    }
+  },
+  {
+    "article": 4,
+    "id": 12678,
+    "lang": "en",
+    "title": "Apple’s Foldable iPhone: A Game-Changer with Invisible Crease and Superior Hinge",
+    "existing_summary": "AppleMagazine describes Apple’s Foldable iPhone as a game-changer featuring an invisible crease and a superior hinge.",
+    "models": {
+      "glm-4.7": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article ti",
+        "elapsed": 2.8,
+        "error": null
+      },
+      "glm-4.6": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article ti",
+        "elapsed": 2.9,
+        "error": null
+      },
+      "glm-4.5": {
+        "content": "The article discusses Apple's development of a foldable iPhone featuring an invisible crease and superior hinge technology, positioning it as a potential game-changer in the smartphone market.",
+        "reasoning_snippet": "This appears to be a title of an article rather than the full content. The title",
+        "elapsed": 4.7,
+        "error": null
+      }
+    }
+  },
+  {
+    "article": 5,
+    "id": 6961,
+    "lang": "en",
+    "title": "Xiaomi confirms global release for new budget smartphone with 120 Hz display - N",
+    "existing_summary": "Xiaomi confirms the global release for a new budget smartphone with a 120 Hz display, according",
+    "models": {
+      "glm-4.7": {
+        "content": "",
+        "elapsed": 0.5,
+        "error": "429 Client Error: Too Many Requests for url: https://api.z.ai/api/paas/v4/chat/c"
+      },
+      "glm-4.6": {
+        "content": "",
+        "reasoning_snippet": "1.  **Analyze the Request:**\n    *   **Task:** Summarize the provided article ti",
+        "elapsed": 3.4,
+        "error": null
+      },
+      "glm-4.5": {
+        "content": "Xiaomi has confirmed that it will globally release a new budget smartphone featuring a 120 Hz display, bringing high refresh rate technology to a more affordable price point.",
+        "reasoning_snippet": "I need to summarize the article in 1-2 sentences in English. The title is \"Xiaom",
+        "elapsed": 4.0,
+        "error": null
+      }
+    }
+  }
+]
