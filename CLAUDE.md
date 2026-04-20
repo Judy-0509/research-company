@@ -148,6 +148,8 @@ Company ID: `<your-company-id>`
 ### RSS Backend 환경변수
 
 ```env
+PORT=8765                        # 백엔드 포트 (기본 8765, 충돌 시 변경)
+BACKEND_HOST=127.0.0.1           # 바인딩 호스트 (기본 127.0.0.1)
 AUTO_COLLECT_ON_START=false      # 서버 시작 시 자동 수집 (기본 off)
 ENABLE_SCHEDULED_COLLECT=false   # 3시간 주기 자동 수집 (기본 off)
 COLLECT_INTERVAL_HOURS=2         # 수집 주기 (시간)
@@ -155,6 +157,13 @@ GLM_API_KEY=...                  # summary worker용 GLM API 키
 SUMMARIZE_BATCH_SIZE=20          # 회당 요약 기사 수
 SUMMARIZE_WALL_CLOCK=90          # 회당 최대 실행 시간 (초)
 ```
+
+### 포트 변경 시 추가 작업
+
+백엔드 포트를 8765에서 변경한 경우, Paperclip 플러그인 설정도 업데이트 필요:
+> Paperclip UI → Settings → Plugins → plugin-research-news → **Backend URL** = `http://localhost:{새포트}`
+
+Paperclip 서버 포트(기본 3100)는 `paperclip/server/.env`의 `PORT` 값으로 변경.
 
 > **주의**: 이 backend는 APScheduler를 프로세스 내부에서 실행하므로 반드시 `--workers 1`로 실행해야 함.
 > `ENABLE_SCHEDULED_COLLECT`와 무관하게 summarize/prune/vacuum job이 항상 등록되므로,
