@@ -171,3 +171,48 @@ SUMMARIZE_WALL_CLOCK=90          # 회당 최대 실행 시간 (초)
 - CN OEM 에이전트가 6개 브랜드 통합 분석; 브랜드별 세부 전략은 개별 브랜드 에이전트
 - 에이전트는 사용자가 명시적으로 취소/중단한 경우 재실행 금지
 - RSS 백엔드 수동 수집: `curl -X POST http://localhost:8765/collect`
+
+---
+
+## 신규 환경 설정 가이드 (플레이스홀더 값 채우는 방법)
+
+이 파일의 `<your-company-id>`, `<your-agent-id>`, `<your-db-password>`는 새 환경에서 직접 조회해서 채워야 한다.
+
+### 1. DB 비밀번호 확인
+
+Paperclip embedded postgres의 기본 비밀번호는 `paperclip`이다. 변경한 적 없으면 그대로 사용.  
+`server/.env`나 `server/src/config.ts`에서 `DATABASE_URL`이 있으면 거기서 확인.
+
+### 2. Company ID 조회
+
+Paperclip 서버 실행 후:
+```powershell
+Invoke-RestMethod "http://localhost:3100/api/companies" | ConvertTo-Json -Depth 3
+```
+반환된 배열에서 `"Research Co."` 항목의 `id` 값이 Company ID.
+
+### 3. Agent ID 조회
+
+Company ID를 알면:
+```powershell
+$companyId = "<your-company-id>"
+Invoke-RestMethod "http://localhost:3100/api/companies/$companyId/agents" | ConvertTo-Json -Depth 3
+```
+반환된 배열에서 `"Topic Analyst"` 항목의 `id` 값이 Agent ID.
+
+### 4. 에이전트 프롬프트 재주입
+
+Agent ID를 채운 뒤 아래 명령으로 시스템 프롬프트를 주입:
+```powershell
+$agentId = "<your-agent-id>"
+$sp = (Get-Content prompts/topic_analyst_prompt.json -Raw | ConvertFrom-Json).systemPrompt
+$body = @{ adapterConfig = @{ systemPrompt = $sp } } | ConvertTo-Json -Depth 5
+Invoke-RestMethod -Uri "http://localhost:3100/api/agents/$agentId" -Method Patch -ContentType "application/json" -Body $body
+```
+
+### 5. GLM API 키 일괄 설정
+
+```powershell
+.\rotate_api_key.ps1 -NewKey "your_glm_api_key"
+```
+`rotate_api_key.ps1` 상단의 `$CompanyId`도 실제 Company ID로 업데이트 필요.
